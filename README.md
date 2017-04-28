@@ -36,13 +36,13 @@ Het valt te verwachten dat onderstaande pijlers nader uitgewerkt zullen worden i
 
 De beste kwaliteit die een stuk code kan hebben, is dat het simpel is. Simpele code is gemakkelijk te doorgronden door andere programmeurs, gemakkelijk opnieuw te gebruiken in andere context, gemakkelijk te testen en gemakkelijk te wijzigen.
 
-Het schrijven van simpele code vereist grote vaardigheid. Analytisch vermogen en uitgebreide kennis van de programmeertaal en het programmeerplatform zijn noodzakelijk. En dan nog zijn er problemen die wezenlijk complex zijn, die zelfs voor de meest vaardige programmeur niet te vangen zijn in simpele code. Complexe code is dan onvermijdbaarm, maar onderneem alle moeite om die complexiteit zoveel mogelijk te beteugelen.
+Het schrijven van simpele code vereist grote vaardigheid. Analytisch vermogen en uitgebreide kennis van de programmeertaal en het programmeerplatform zijn noodzakelijk. En dan nog zijn er problemen die wezenlijk complex zijn, die zelfs voor de meest vaardige programmeur niet te vangen zijn in simpele code. Complexe code is dan onvermijdbaar, maar onderneem alle moeite om die complexiteit zoveel mogelijk te beteugelen.
 
 Code simpel houden is een kunst maar er zijn vuistregels die helpen:
 
-* Schrijf korte stukken code. Knip grotere stukken code op in kleine simpele delen.
+* Schrijf korte stukken code. Knip grotere stukken code op in kleine simpele delen. Als je moet scrollen om een enkele methode te bekijken dan is deze waarschijnlijk te lang. Het bestand als geheel zou niet meer dan enkele pagina's moeten zijn.
 
-* Ga niet verder dan 3 niveau's van geneste if-statements.
+* Ga niet verder dan 2, uiterlijk 3, niveau's van geneste if-statements of loop constructies.
 
 * Zorg dat elke methode (/procedure /functie) maar 1 ding doet, 1 duidelijke verantwoordelijkheid heeft.
 
@@ -80,7 +80,7 @@ Hoewel het vaak wenselijk is om code separaat te documenteren in een ontwerptool
 
 De grote kunst van het programmeren is om "nu" alleen te coderen wat "nu" nodig maar de code zo te schrijven zodat "later" eenvoudig gecodeerd kan worden wat "later" nodig is.
 
-Vele programmeurs zijn met de beste bedoelingen in de valkuil gestapt om code te generiek en te herbruikbaar op te zetten, om er later achter te komen dat het geen bruikbare oplossing was. Of met mindere bedoelingen in de andere valkuil, om snelle code te schrijven die nu werkt maar latere aanpassingen van het systeem moeilijk zullen maken.
+Vele programmeurs zijn met de beste bedoelingen in de valkuil gestapt om code te generiek en te herbruikbaar op te zetten, om er later achter te komen dat het geen herbruikbare oplossing was. Of met mindere bedoelingen in de andere valkuil, om snelle code te schrijven die nu werkt maar latere aanpassingen van het systeem moeilijk zullen maken.
 
 Codeer niet meer dan wat de huidige user story vraagt. Als je de oplossing op meerdere manieren kunt coderen, kies dan de manier die later het gemakkelijkst aan te passen zal zijn.
 
@@ -92,7 +92,7 @@ Het heeft geen zin om "nu" generieke/herbruikbare oplossingen te maken als dat v
 
 *Edsger Dijkstra, "Notes on Structured Programming"*
 
-Codeer niet alleen "de code zelf" maar codeer ook unit tests: stukjes code die jouw code testen. Door het schrijven van unit tests denk je beter na over je code en overtuig je jezelf en collega's van de correctheid van die code. De unit tests moeten eenvoudig en snel herhaalbaar zijn, zodat bij volgende aanpassingen kan worden vastgesteld dat eerder gerealiseerde code nog steeds werkt zoals jij toen voor ogen had. Draai alle unit tests van het stuk code dat onder handen is bij aanpassingen van de code.
+Codeer niet alleen "de code zelf" maar codeer ook unit tests: stukjes code die jouw code testen. Door het schrijven van unit tests denk je beter na over je code en overtuig je jezelf en collega's van de correctheid van die code. De unit tests moeten eenvoudig en snel herhaalbaar zijn, zodat bij volgende aanpassingen kan worden vastgesteld dat eerder gerealiseerde code nog steeds werkt zoals jij toen voor ogen had. Draai alle unit tests, liefst volledig automatisch, van het stuk code dat onder handen is bij aanpassingen van de code.
 
 Bij het bouwen van een stuk functionaliteit kan 'kijken of het werkt' al snel voldoende controle lijken om op te gaan leveren. Echter, serieuze applicaties kennen complexere logica waar 'kijken of het werkt' betekent dat je onvolledig test, of dat je een explosief groeiend aantal testgevallen met de hand na moet gaan on er zeker van te zijn dat er niet iets omgevallen is. Dat is natuurlijk onwenselijk.
 
@@ -138,7 +138,7 @@ Er zijn een aantal aandachtspunten voor het uitvoeren van code reviews.
 
 * Zorg dat de review wordt gezien als een positieve kans om van elkaar te leren en niet alleen als een (verplicht) controlemechanisme.
 
-* Doe liefst een face-to-face overdracht van de code naar de reviewer. Gooi de code niet over de schutting naar de reviewer.
+* Doe liefst een face-to-face overdracht van de code naar de reviewer. Gooi de code niet over de schutting naar de reviewer, maar waak er ook voor dat de ontwikkelaar de reviewer aan de hand meeneemt door de code waarbij de reviewer niet meer zelf nadenkt en kritisch kijkt.
 
 * Baseer de review niet op persoonlijke voorkeuren. Belangrijk is om te kijken of het programma bijdraagt aan het juiste resultaat, voldoet aan de geldende standaarden en richtlijnen en aansluit bij de architectuur.
 
@@ -190,7 +190,7 @@ Het verbeteren van de kwalitiet van de code begint bij een goede opleiding maar 
 
 * Sta stil bij reviews van jouw eigen code. Mogelijk ontdek je bepaalde patterns die je in de toekomst beter kan vermijden.
 
-* Documenteer je ontwerp- en technische beslissingen. Dit helpt om je keuzes achteraf (af en toe) te beoordelen.
+* Documenteer je ontwerp- en technische beslissingen, het liefst zo dicht mogelijk bij de code. Dit helpt om je keuzes achteraf (af en toe) te beoordelen.
 
 * Refactor code waar je niet blij mee bent en probeer het te verbeteren.
 
